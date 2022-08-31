@@ -13,7 +13,7 @@ from math import ceil, floor
 
 tamanhoArea = float(input("Insira a área em metros quadrados: "))
 litros = tamanhoArea / 6
-litroFolga = litros * 1.1
+litroFolga = litros * 0.9
 galoes = ceil(litros / 3.6)
 latas = ceil(litros / 18)
 custoLatas = latas * 80
@@ -27,7 +27,7 @@ print("custo(apenas galoes):", custoGalao)
 latasFolga = litroFolga / 18
 resto = latasFolga - floor(latasFolga)
 
-if resto >= 0.8 or resto == 0:
+if resto > 0.8 or resto == 0:
     latasFolga = ceil(latasFolga)
     galoesFolga = 0
 else:
